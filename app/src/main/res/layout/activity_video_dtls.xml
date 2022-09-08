@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEEEE"
+    tools:context=".activity.VideoDtlsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_black"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:id="@+id/profile"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/user_profile"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/img"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:id="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Dr.Alexander"/>
+
+        <TextView
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/img"
+            android:layout_width="wrap_content"
+            android:textColor="#7A7979"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum, or lipsum as it is sometimes known graphic or web designs."/>
+    </RelativeLayout>
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/idExoPlayerVIew"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/idExoPlayerVIew"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/first_listcat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+</RelativeLayout>

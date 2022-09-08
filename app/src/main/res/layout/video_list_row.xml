@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#D6D6D6"
+    android:layout_marginTop="10dp"
+    android:id="@+id/header">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="1.sasas"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/test_name"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:visibility="gone"
+        android:id="@+id/sub_list"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sub"
+            android:layout_width="60dp"
+            android:src="@drawable/user_profile"
+            android:layout_height="60dp"/>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tony smith"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:layout_marginTop="3dp"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:textColor="#5C5C5C" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/total_marks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 Marks"
+                    android:textSize="13dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#807E7E" />
+
+                <TextView
+                    android:id="@+id/questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration : 30 min"
+                    android:textSize="13dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#807E7E" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/btn_continue"
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_video"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:text="Start"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:src="@drawable/play_arrow"
+            android:background="@drawable/btn_rounded_bg"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
